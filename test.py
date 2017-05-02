@@ -1,9 +1,10 @@
 # -*- coding: UTF-8 -*-
 from selenium import webdriver
-from nose.tools import ok_,eq_
+from nose.tools import ok_, eq_
 import time
+
 if __name__ == "__main__":
-    driver=webdriver.Firefox()
+    driver = webdriver.Firefox()
     driver.get("http://www.baidu.com")
     driver.maximize_window()
     nowhandle = driver.current_window_handle
@@ -20,5 +21,3 @@ if __name__ == "__main__":
             driver.switch_to_window(handle)
     time.sleep(1)
     driver.find_element_by_css_selector("a.normal_download").click()
-
-
